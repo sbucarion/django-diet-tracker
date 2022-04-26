@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style type='text/css'>
+    .loop {
+        padding-top:20px;
+    }
+    
+</style>
+
+<div class='loop'>
+    <h1>Calories Consumed Today</h1>
+
+    {% for k,v in data.items %}
+        <ul>
+        <li>{{v}} {{k}}</li>
+        </ul>
+    {% endfor %}
+
+</div>
+{% endblock %}

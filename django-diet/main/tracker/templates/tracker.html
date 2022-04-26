@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<style type='text/css'>
+    .container {
+        padding-top:20px;
+    }
+    
+</style>
+
+<div class = "container">
+    <h1>Tracker</h1>
+    <form method="post">
+        {{form}}
+        {% csrf_token %}
+
+        <button type = "submit"> Submit </button>
+    </form>
+</div>
+{% endblock %}

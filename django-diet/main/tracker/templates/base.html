@@ -1,0 +1,46 @@
+<!--Navigation Bar-->
+<html>
+{% if user.is_authenticated %}
+
+<style type="text/css">
+	*{
+		font-family: 'Trebuchet MS', sans-serif;
+	}
+
+	.header {
+		padding: 6px;
+		text-align: left;
+		background: #111;
+		color: blue;
+		font-size: 30px;
+		width:100%;
+		position: fixed;
+		top: 0;
+		left:0;
+	}
+
+	.header a {
+		padding:2px 2px 2px;
+		text-decoration: none;
+		font-size:25px;
+		color: #D3D3D3;
+		
+	}
+
+</style>
+
+<body>
+	<div class="header">
+		<a href="/display">Display |</a>
+		<a href="/tracker">Tracker |</a>
+		<a href="/logout">Logout</a>
+
+	</div>
+{% endif %}
+ 
+
+{% block content %}
+{% endblock %}
+ 
+</body>
+</html>
